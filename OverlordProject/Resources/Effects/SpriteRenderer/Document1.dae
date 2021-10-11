@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+	<asset>
+		<contributor>
+			<author>victor</author>
+			<authoring_tool>NVIDIA FX Composer 2.5</authoring_tool>
+			<comments/>
+			<copyright/>
+		</contributor>
+		<created>2021-03-02T09:29:26Z</created>
+		<keywords>FXComposer, NVIDIA</keywords>
+		<modified>2021-03-05T14:51:46Z</modified>
+		<subject/>
+		<title/>
+		<unit/>
+		<up_axis>Y_UP</up_axis>
+	</asset>
+	<library_visual_scenes>
+		<visual_scene id="DefaultScene" name="DefaultScene">
+			<node sid="__fxc_remove_node"/>
+			<extra type="evaluatescene_enables">
+				<technique profile="NVIDIA_FXCOMPOSER"/>
+			</extra>
+		</visual_scene>
+	</library_visual_scenes>
+	<library_effects>
+		<effect id="Effect" name="SpriteRenderer">
+			<profile_COMMON>
+				<technique sid="__fxc_remove_profile_COMMON">
+					<constant/>
+				</technique>
+			</profile_COMMON>
+			<extra type="import">
+				<technique profile="NVIDIA_FXCOMPOSER">
+					<import url="../SpriteRenderer.fx" compiler_options="" profile="fx"/>
+				</technique>
+			</extra>
+		</effect>
+	</library_effects>
+	<library_materials>
+		<material id="SpriteRenderer" name="SpriteRenderer_Material">
+			<instance_effect url="#Effect">
+				<technique_hint platform="PC-D3D10" ref="Default"/>
+				<setparam ref="gTransform">
+					<float4x4>1.82593 -3.66232e-007 -1.82593 8.2658e-006 -1.12165 2.24331 -1.12165 8.46266e-006 -0.578107 -0.578107 -0.578107 25.2831 -0.57735 -0.57735 -0.57735 25.3162</float4x4>
+				</setparam>
+				<setparam ref="gTextureSize">
+					<float2>0 0</float2>
+				</setparam>
+				<setparam ref="gSpriteTexture">
+					<surface type="2D">
+						<init_as_null/>
+						<format>A8R8G8B8</format>
+						<size>0 0 1</size>
+					</surface>
+				</setparam>
+			</instance_effect>
+		</material>
+	</library_materials>
+	<scene>
+		<instance_visual_scene url="#DefaultScene"/>
+	</scene>
+</COLLADA>
